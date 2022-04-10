@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Колл-центр</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body class="page-wrapper">
+	<header class="site-header container">
+		<div class="row d-flex justify-content-between align-items-center">
+			<div class="col col-2">
+				<!--<img src="images/лого.jpeg" alt="лого" width="100px" height="100px">-->
+			</div>
+			<nav class="col col-6">
+				<div class="row d-flex justify-content-center"> 
+					<div class="col">Услуги</div>
+					<div class="col">Стоимость</div>
+					<div class="col">Опыт</div>
+					<div class="col">Клиенты</div>
+					<div class="col">Контакты</div>
+				</div>
+			</nav>
+			<div class="col col-2">
+				<div class="row">
+					<div class="col">
+						<a href="tel:+79514747859;">88008000000</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<a href="mailto:spb@globemedia.ru;">spb@globemedia.ru</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+	</header>
+	<main class="content container">
+		<div class="row d-flex justify-content-center">
+			<div class="col col-12">
+				<div class="row">
+					<div class="col col-12 first-screen">
+						<img class="background-img" src="images/фон.jpg">
+						<div class="text-first-screen">
+							<h1>Удаленный колл-центр</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row d-flex justify-content-center ">
+			<div class="col-4 incoming-vidget services-on">
+				<img src="images/входящие.jpg" class="incoming-img">
+				<h2 class="incoming-text">ВХОДЯЩИЕ от 5 руб/мин</h2>
+			</div>
+			<div class="col-4 outcoming-vidget services-off">
+				<img src="images/исходящие.jpg" class="outcoming-img img-off">
+				<h2 class="incoming-text">ИСХОДЯЩИЕ от 5 руб/мин</h2>
+			</div>
+		</div>
+		<div class="row services visible incoming-services">
+			<div class="col-4">
+				<ul>
+					<li>обработка входящих звонков</li>
+					<li>колл-центр в аренду</li>
+					<li>горячая линия</li>
+					<li>справочная служба</li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<ul>
+					<li>тех поддержка</li>
+					<li>консультирование</li>
+					<li>запись на прием</li>
+					<li>запись на собеседование</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row services unvisible outcoming-services">
+			<div class="col-4">
+				<ul>
+					<li>анкетирование</li>
+					<li>прозвон базы</li>
+					<li>поиск клиентов</li>
+					<li>приглашение на мероприятие</li>
+					<li>сбор информации</li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<ul>
+					<li>информирование о скидках</li>
+					<li>подтверждение приема</li>
+					<li>информирование об индивидуальных предложениях</li>
+				</ul>
+			</div>
+		</div>	
+	</main>
+	<footer class="site-footer"></footer>
+	<script type="text/javascript">
+		let vidgetIncoming = document.querySelector(".incoming-vidget");
+		vidgetIncoming.addEventListener('click',show);
+
+		let vidgetOutcoming = document.querySelector(".outcoming-vidget");
+		vidgetOutcoming.addEventListener('click',show);
+
+
+		function show() {
+			document.querySelector('.incoming-services').classList.toggle('visible');
+			document.querySelector('.incoming-services').classList.toggle('unvisible');
+			document.querySelector('.incoming-img').classList.toggle('img-on');
+			document.querySelector('.incoming-img').classList.toggle('img-off');
+			document.querySelector('.incoming-vidget').classList.toggle('services-on');
+			document.querySelector('.incoming-vidget').classList.toggle('services-off');
+			document.querySelector('.outcoming-services').classList.toggle('visible');
+			document.querySelector('.outcoming-services').classList.toggle('unvisible');
+			document.querySelector('.outcoming-img').classList.toggle('img-on');
+			document.querySelector('.outcoming-img').classList.toggle('img-off');
+			document.querySelector('.outcoming-vidget').classList.toggle('services-on');
+			document.querySelector('.outcoming-vidget').classList.toggle('services-off');
+		}
+	</script>
+</body>
+</html>
